@@ -1,31 +1,21 @@
 {
-  "id": "[plugin].com.pot-app.lingva_tts",
+  "id": "[plugin].com.TechDecryptor.microsoft",
   "plugin_type": "tts",
-  "icon": "lingva.svg",
-  "display": "Lingva",
-  "homepage": "https://github.com/pot-app/pot-app-tts-plugin-template",
-  "needs": [{ "key": "requestPath", "display": "请求地址" }],
+  "icon": "icon.svg",
+  "display": "Microsoft",
+  "homepage": "https://github.com/TechDecryptor/pot-app-translate-plugin-microsoft",
+  "needs": [
+    { "key": "zh-CN-speaker", "display": "zh-CN Speaker" },
+    { "key": "zh-TW-speaker", "display": "zh-TW Speaker" },
+    { "key": "en-US-speaker", "display": "en-US Speaker" },
+    { "key": "ja-JP-speaker", "display": "ja-JP Speaker" },
+    { "key": "ko-KR-speaker", "display": "ko-KR Speaker" }
+  ],
   "language": {
-    "zh_cn": "zh",
-    "zh_tw": "zh_HANT",
-    "en": "en",
-    "ja": "ja",
-    "ko": "ko",
-    "fr": "fr",
-    "es": "es",
-    "ru": "ru",
-    "de": "de",
-    "it": "it",
-    "tr": "tr",
-    "pt": "pt",
-    "pt_br": "pt",
-    "vi": "vi",
-    "id": "id",
-    "th": "th",
-    "ms": "ms",
-    "ar": "ar",
-    "hi": "hi",
-    "mn_cy": "mn",
-    "km": "km"
+    "zh_cn": "zh-CN",
+    "zh_tw": "zh-TW",
+    "en": "en-US",
+    "ja": "ja-JP",
+    "ko": "ko-KR"
   }
 }

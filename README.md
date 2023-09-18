@@ -1,70 +1,105 @@
-# Pot-App 语音合成插件模板仓库 (以 [Lingva](https://github.com/TheDavidDelta/lingva-translate) 为例)
+# Pot-App Microsoft 语音合成插件 (无需配置，直接使用)
 
-### [English](./README_EN.md) | 简体中文
+## 使用方法
 
-### 此仓库为模板仓库，编写插件时可以直接由此仓库创建插件仓库
+### 安装 Pot
 
-## 插件编写指南
+此插件为 [Pot App](https://github.com/pot-app/pot-desktop) 翻译插件，必须配合 [Pot App](https://github.com/pot-app/pot-desktop) 来使用
 
-### 1. 插件仓库创建
+### 安装插件
 
-- 以此仓库为模板创建一个新的仓库
-- 仓库名为 `pot-app-tts-plugin-<插件名>`，例如 `pot-app-tts-plugin-lingva_tts`
+1. 下载对应平台的插件，解压得到 `.potext` 文件
+2. 打开 Pot-偏好设置-服务设置-翻译-添加外部插件-安装外部插件
+3. 选择刚刚解压得到的 `.potext` 文件，安装成功
+4. 将插件添加到服务列表即可使用
 
-### 2. 插件信息配置
+## Speaker
 
-编辑 `info.json` 文件，修改以下字段：
+### zh-CN
 
-- `id`：插件唯一 id，必须以`[plugin]`开头，例如 `[plugin].com.pot-app.lingva_tts`
-- `homepage`: 插件主页，填写你的仓库地址即可，例如 `https://github.com/pot-app/pot-app-tts-plugin-template`
-- `display`: 插件显示名称，例如 `Lingva`
-- `icon`: 插件图标，例如 `lingva.svg`
-- `needs`: 插件依赖，一个数组，每个依赖为一个对象，包含以下字段：
-  - `key`: 依赖 key，对应该项依赖在配置文件中的名称，例如 `requestPath`
-  - `display`: 依赖显示名称，对应用户显示的名称，例如 `请求地址`
-- `language`: 插件支持的语言映射，将 pot 的语言代码和插件发送请求时的语言代码一一对应
+| Name |      Value     |
+|------|----------------|
+| 晓晓 | XiaoxiaoNeural |
+| 云扬 | YunyangNeural |
+| 晓辰 | XiaochenNeural |
+| 晓涵 | XiaohanNeural |
+| 晓梦 | XiaomengNeural |
+| 晓墨 | XiaomoNeural |
+| 晓秋 | XiaoqiuNeural |
+| 晓睿 | XiaoruiNeural |
+| 晓双 | XiaoshuangNeural |
+| 晓萱 | XiaoxuanNeural |
+| 晓颜 | XiaoyanNeural |
+| 晓伊 | XiaoyiNeural |
+| 晓悠 | XiaoyouNeural |
+| 晓甄 | XiaozhenNeural |
+| 云枫 | YunfengNeural |
+| 云皓 | YunhaoNeural |
+| 云健 | YunjianNeural |
+| 云夏 | YunxiaNeural |
+| 云希 | YunxiNeural |
+| 云野 | YunyeNeural |
+| 云泽 | YunzeNeural |
 
-### 3. 插件编写/编译
+### zh-TW
 
-编辑 `src/lib.rs` 实现 `tts` 函数
+| Name |      Value     |
+|------|----------------|
+| 曉臻 | HsiaoChenNeural |
+| 曉雨 | HsiaoYuNeural |
+| 雲哲 | YunJheNeural |
 
-#### 输入参数
+### en-US
 
-```rust
-    text: &str,
-    lang: &str,
-    needs: HashMap<String, String>, // 插件需要的其他配置信息,由info.json定义
-```
+| Name |      Value     |
+|------|----------------|
+| Jenny | JennyNeural |
+| Jenny Multilingual | JennyMultilingualNeural |
+| Guy | GuyNeural |
+| Amber | AmberNeural |
+| Ana | AnaNeural |
+| Aria | AriaNeural |
+| Ashley | AshleyNeural |
+| Brandon | BrandonNeural |
+| Christopher | ChristopherNeural |
+| Cora | BrandonNeural |
+| Davis | DavisNeural |
+| Elizabeth | ElizabethNeural |
+| Eric | EricNeural |
+| Jacob | JacobNeural |
+| Jane | JaneNeural |
+| Jason | JasonNeural |
+| Michelle | MichelleNeural |
+| Monica | MonicaNeural |
+| Nancy | NancyNeural |
+| Sara | SaraNeural |
+| Steffan | SteffanNeural |
+| Tony | TonyNeural |
+| Roger | RogerNeural |
+| AIGenerate1 | AIGenerate1Neural |
+| AIGenerate2 | AIGenerate2Neural |
 
-#### 返回值
+### ja-JP
 
-```rust
-// 返回用Value包裹的字节数组
-  let result = res.to_vec();
-  return Ok(json!(result))；
-```
+| Name |      Value     |
+|------|----------------|
+| 七海 | NanamiNeural |
+| 圭太 | KeitaNeural |
+| 碧衣 | AoiNeural |
+| 大智 | DaichiNeural |
+| 真夕 | MayuNeural |
+| 直紀 | NaokiNeural |
+| 志織 | ShioriNeural |
 
-#### 测试/编译
+### ko-KR
 
-```bash
-cargo test --package plugin --lib -- tests --nocapture # 运行测试用例
-cargo build --release # 编译
-```
-
-### 4. 打包 pot 插件
-
-1. 在`target/release`目录找到`plugin.dll`(Windows)/`libplugin.dylib`(MacOS)/`libplugin.so`(Linux)文件，统一删除`lib`前缀.
-
-2. 将`plugin.dll`/`libplugin.dylib`/`libplugin.so`文件和`info.json`以及图标文件压缩为 zip 文件。
-
-3. 将文件重命名为`<插件id>.potext`，例如`[plugin].com.pot-app.lingva_tts.potext`,即可得到 pot 需要的插件。
-
-## 自动编译打包
-
-本仓库配置了 Github Actions，可以实现推送后自动编译打包插件。
-
-每次将仓库推送到 GitHub 之后 actions 会自动运行，将打包好的插件上传到 artifact，在 actions 页面可以下载
-
-每次提交 Tag 之后，actions 会自动运行，将打包好的插件上传到 release，在 release 页面可以下载打包好的插件
-
-> 注意需要在仓库设置中添加一个名为`TOKEN`的 secret，值为一个有权限的 GitHub Token，用于上传 release
+| Name |      Value     |
+|------|----------------|
+| 선히 | SunHiNeural |
+| 인준 | InJoonNeural |
+| 봉진 | BongJinNeural |
+| 국민 | GookMinNeural |
+| 지민 | JiMinNeural |
+| 서현 | SeoHyeonNeural |
+| 순복 | SoonBokNeural |
+| 유진 | YuJinNeural |
