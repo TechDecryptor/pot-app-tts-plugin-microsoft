@@ -81,6 +81,7 @@ pub fn tts(
             "en-US" => "en-US-AriaNeural".to_string(),
             "ja-JP" => "ja-JP-NanamiNeural".to_string(),
             "ko-KR" => "ko-KR-SunHiNeural".to_string(),
+            "tr-TR" => "tr-TR-AhmetNeural".to_string(),
             _ => return Err("Language not supported".into()),
         },
     };

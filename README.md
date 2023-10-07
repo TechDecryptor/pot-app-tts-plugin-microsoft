@@ -103,3 +103,10 @@
 | 서현 | SeoHyeonNeural |
 | 순복 | SoonBokNeural |
 | 유진 | YuJinNeural |
+
+### tr-TR
+
+| Name |      Value     |
+|------|----------------|
+| Ahmet | AhmetNeural |
+| Emel | EmelNeural |

@@ -9,13 +9,15 @@
     { "key": "zh-TW-speaker", "display": "zh-TW Speaker" },
     { "key": "en-US-speaker", "display": "en-US Speaker" },
     { "key": "ja-JP-speaker", "display": "ja-JP Speaker" },
-    { "key": "ko-KR-speaker", "display": "ko-KR Speaker" }
+    { "key": "ko-KR-speaker", "display": "ko-KR Speaker" },
+    { "key": "tr-TR-speaker", "display": "tr-TR Speaker" }
   ],
   "language": {
     "zh_cn": "zh-CN",
     "zh_tw": "zh-TW",
     "en": "en-US",
     "ja": "ja-JP",
-    "ko": "ko-KR"
+    "ko": "ko-KR",
+    "tr": "tr-TR"
   }
 }
