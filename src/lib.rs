@@ -97,10 +97,21 @@ pub fn tts(
         .headers(construct_headers())
         .send()?
         .bytes()?;
-
     let result = res.to_vec();
-
+    if result.len() < 1000 {
+        let error = String::from_utf8_lossy(&result);
+        match parse_error(serde_json::from_str(&error)?) {
+            Some(message) => return Err(message.into()),
+            None => return Err(error.into()),
+        }
+    }
     Ok(json!(result))
+}
+
+fn parse_error(json: Value) -> Option<String> {
+    let error = json["error"].as_object()?;
+    let message = error["message"].as_str()?;
+    Some(message.to_string())
 }
 
 #[cfg(test)]
@@ -109,7 +120,7 @@ mod tests {
     #[test]
     fn try_request() {
         let needs = HashMap::new();
-        let result = tts("你好", "zh-CN", needs).unwrap();
+        let result = tts("get", "en-US", needs).unwrap();
         println!("{result}");
     }
 }
