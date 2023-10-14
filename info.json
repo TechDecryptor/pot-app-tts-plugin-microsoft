@@ -5,12 +5,114 @@
   "display": "Microsoft",
   "homepage": "https://github.com/TechDecryptor/pot-app-translate-plugin-microsoft",
   "needs": [
-    { "key": "zh-CN-speaker", "display": "zh-CN Speaker" },
-    { "key": "zh-TW-speaker", "display": "zh-TW Speaker" },
-    { "key": "en-US-speaker", "display": "en-US Speaker" },
-    { "key": "ja-JP-speaker", "display": "ja-JP Speaker" },
-    { "key": "ko-KR-speaker", "display": "ko-KR Speaker" },
-    { "key": "tr-TR-speaker", "display": "tr-TR Speaker" }
+    {
+      "key": "zh-CN-speaker",
+      "display": "zh-CN Speaker",
+      "type": "select",
+      "options": {
+        "XiaoxiaoNeural": "晓晓",
+        "YunyangNeural": "云扬",
+        "XiaochenNeural": "晓辰",
+        "XiaohanNeural": "晓涵",
+        "XiaomengNeural": "晓梦",
+        "XiaomoNeural": "晓墨",
+        "XiaoqiuNeural": "晓秋",
+        "XiaoruiNeural": "晓睿",
+        "XiaoshuangNeural": "晓双",
+        "XiaoxuanNeural": "晓萱",
+        "XiaoyanNeural": "晓颜",
+        "XiaoyiNeural": "晓伊",
+        "XiaoyouNeural": "晓悠",
+        "XiaozhenNeural": "晓甄",
+        "YunfengNeural": "云枫",
+        "YunhaoNeural": "云皓",
+        "YunjianNeural": "云健",
+        "YunxiaNeural": "云夏",
+        "YunxiNeural": "云希",
+        "YunyeNeural": "云野",
+        "YunzeNeural": "云泽"
+      }
+    },
+    {
+      "key": "zh-TW-speaker",
+      "display": "zh-TW Speaker",
+      "type": "select",
+      "options": {
+        "HsiaoChenNeural": "曉臻",
+        "HsiaoYuNeural": "曉雨",
+        "YunJheNeural": "雲哲"
+      }
+    },
+    {
+      "key": "en-US-speaker",
+      "display": "en-US Speaker",
+      "type": "select",
+      "options": {
+        "JennyNeural": "Jenny",
+        "JennyMultilingualNeural": "Jenny Multilingual",
+        "GuyNeural": "Guy",
+        "AmberNeural": "Amber",
+        "AnaNeural": "Ana",
+        "AriaNeural": "Aria",
+        "AshleyNeural": "Ashley",
+        "BrandonNeural": "Brandon",
+        "ChristopherNeural": "Christopher",
+        "BrandonNeural": "Cora",
+        "DavisNeural": "Davis",
+        "ElizabethNeural": "Elizabeth",
+        "EricNeural": "Eric",
+        "JacobNeural": "Jacob",
+        "JaneNeural": "Jane",
+        "JasonNeural": "Jason",
+        "MichelleNeural": "Michelle",
+        "MonicaNeural": "Monica",
+        "NancyNeural": "Nancy",
+        "SaraNeural": "Sara",
+        "SteffanNeural": "Steffan",
+        "TonyNeural": "Tony",
+        "RogerNeural": "Roger",
+        "AIGenerate1Neural": "AIGenerate1",
+        "AIGenerate2Neural": "AIGenerate2"
+      }
+    },
+    {
+      "key": "ja-JP-speaker",
+      "display": "ja-JP Speaker",
+      "type": "select",
+      "options": {
+        "NanamiNeural": "七海",
+        "KeitaNeural": "圭太",
+        "AoiNeural": "碧衣",
+        "DaichiNeural": "大智",
+        "MayuNeural": "真夕",
+        "NaokiNeural": "直紀",
+        "ShioriNeural": "志織"
+      }
+    },
+    {
+      "key": "ko-KR-speaker",
+      "display": "ko-KR Speaker",
+      "type": "select",
+      "options": {
+        "SunHiNeural": "선히",
+        "InJoonNeural": "인준",
+        "BongJinNeural": "봉진",
+        "GookMinNeural": "국민",
+        "JiMinNeural": "지민",
+        "SeoHyeonNeural": "서현",
+        "SoonBokNeural": "순복",
+        "YuJinNeural": "유진"
+      }
+    },
+    {
+      "key": "tr-TR-speaker",
+      "display": "tr-TR Speaker",
+      "type": "select",
+      "options": {
+        "AhmetNeural": "Ahmet",
+        "EmelNeural": "Emel"
+      }
+    }
   ],
   "language": {
     "zh_cn": "zh-CN",
