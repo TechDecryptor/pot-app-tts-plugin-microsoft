@@ -1,5 +1,10 @@
 # Pot-App [Microsoft](https://azure.microsoft.com/zh-cn/products/ai-services/text-to-speech) 语音合成插件 (无需配置，直接使用)
 
+> [!WARNING]
+> 该插件已经失效，后续是否可用暂未可知
+> 
+> 请使用 [有道](https://github.com/TechDecryptor/pot-app-tts-plugin-youdao) 或者 [火山](https://github.com/TechDecryptor/pot-app-tts-plugin-volcengine) 代替
+
 ## 支持平台
 
 - [x] Windows
